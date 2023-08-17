@@ -8,8 +8,9 @@
   --secondary-gray-color: #2e2f42;
   --primary-blue-color: #4d5ae5;
   --primary-accent-color: #404bbf;
-  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --active-social-icon: #31d0aa;
+  --border-color-input-modal: rgba(46, 47, 66, 0.4);
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -79,6 +80,11 @@ ol {
 .icon-social {
   fill: currentColor;
   color: var(--secondary-white-color);
+}
+
+.list-text {
+  color: var(--primary-gray-color);
+  font-size: 16px;
 }
 
 /* ================Стилі для HEADER==================== */
@@ -198,16 +204,15 @@ ol {
   padding-top: 188px;
   padding-bottom: 188px;
   background-color: var(--secondary-gray-color);
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
     url(../images/hero/hero-bg-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 1440px;
 }
+
 .hero-title {
   color: var(--primary-white-color);
   margin-bottom: 48px;
@@ -237,6 +242,7 @@ ol {
   margin-right: auto;
   transition: background-color var(--animation);
 }
+
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--primary-accent-color);
@@ -249,6 +255,7 @@ ol {
   padding-bottom: 120px;
   padding-top: 120px;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -291,6 +298,7 @@ ol {
   letter-spacing: 0.045em;
   text-transform: capitalize;
 }
+
 .wrap-doing {
   padding-bottom: 120px;
 }
@@ -298,6 +306,7 @@ ol {
 .item-doing {
   flex-basis: calc((100% - 3 * 16px) / 3);
 }
+
 /* ================/Стилі для WHAT ARE YOU DOING==================== */
 
 /* ================Стилі для TEAM==================== */
@@ -333,6 +342,7 @@ ol {
   width: calc((100% - 120px) / 6);
   height: 88px;
 }
+
 .link-customer {
   display: flex;
   align-items: center;
@@ -370,7 +380,6 @@ ol {
 .wrap-footer {
   display: flex;
   align-items: baseline;
-  /* gap: 120px; */
 }
 
 .wrap-logo-footer {
@@ -390,7 +399,6 @@ ol {
   color: var(--secondary-white-color);
   max-width: 264px;
 }
-
 
 .social-title {
   color: var(--primary-white-color);
@@ -412,8 +420,73 @@ ol {
   fill: currentColor;
   color: var(--secondary-white-color);
 }
-/* ================/Стилі для FOOTER==================== */
 
+.footer-form {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+  margin-left: 80px;
+}
+
+.text-subscribe {
+  margin-bottom: 16px;
+  color: var(--primary-white-color);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.input-footer-form {
+  display: block;
+  color: var(--primary-white-color);
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--primary-white-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.input-footer-form::placeholder {
+  color: var(--primary-white-color);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+
+.input-footer-form:focus {
+  border-color: var(--primary-blue-color);
+  outline: none;
+}
+
+.bnt-subscribe {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+  background-color: var(--primary-blue-color);
+  color: var(--primary-white-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  border: none;
+  transition: background-color var(--animation);
+}
+
+.bnt-subscribe:hover,
+.bnt-subscribe:focus {
+  background-color: var(--primary-accent-color);
+}
+
+.icon-footer-btn {
+  fill: currentColor;
+  color: var(--primary-white-color);
+}
+
+/* ================/Стилі для FOOTER==================== */
 
 /* ===================Стилі для BACKDROP ===================*/
 .backdrop {
@@ -435,10 +508,11 @@ ol {
 
 /* ===================Стилі для MODAL ===================*/
 .modal {
+  padding: 72px 24px 24px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);;
+  transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
   width: 408px;
   min-height: 584px;
@@ -479,14 +553,147 @@ ol {
 }
 
 .close-btn-icon {
-  fill: var(--secondary-gray-color); 
+  fill: var(--secondary-gray-color);
   transition: fill var(--animation);
 }
-.close-btn:hover .close-btn-icon, .close-btn:focus .close-btn-icon  {
+
+.close-btn:hover .close-btn-icon,
+.close-btn:focus .close-btn-icon {
   fill: var(--primary-white-color);
 }
-/* ===================/Стилі для MODAL ===================*/
 
+.modal-text {
+  color: var(--secondary-gray-color);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.label-text {
+  color: var(--customers-icon-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.modal-label:nth-child(5) {
+  margin-bottom: 16px;
+}
+
+.wrap-input {
+  display: block;
+  position: relative;
+}
+
+.modal-input {
+  display: block;
+  font-size: 18px;
+  color: var(--secondary-gray-color);
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px 8px 36px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color-input-modal);
+  transition: border-color var(--animation);
+}
+
+.modal-input:focus {
+  border-color: var(--primary-blue-color);
+  outline-offset: 4px;
+  outline-color: transparent;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: currentColor;
+  color: var(--secondary-gray-color);
+  transition: color var(--animation);
+}
+
+.modal-input:focus+.input-icon {
+  color: var(--primary-blue-color);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color-input-modal);
+  font-size: 18px;
+  color: var(--secondary-gray-color);
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid var(--border-color-input-modal);
+  transition: border-color var(--animation);
+}
+
+.modal-textarea::placeholder {
+  color: var(--customers-icon-color);
+  font-size: 12px;
+  line-height: 1.17;
+  /* 116.667% */
+  letter-spacing: 0.03em;
+}
+
+.modal-textarea:focus {
+  border-color: var(--primary-blue-color);
+  outline-offset: 4px;
+  outline-color: transparent;
+}
+
+.modal-label-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  color: var(--customers-icon-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.active-link-policy {
+  color: var(--primary-blue-color);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+}
+
+.modal-checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.checkbox-icon {
+  cursor: pointer;
+  padding: 4px 3px;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color-input-modal);
+  fill: currentColor;
+  color: transparent;
+}
+
+.modal-checkbox:checked+.checkbox-icon {
+  background-color: var(--primary-accent-color);
+  color: var(--secondary-white-color);
+  border-color: transparent;
+}
+
+.modal-checkbox:focus+.checkbox-icon {
+  outline: 1px solid var(--primary-blue-color);
+}
+
+/* ===================/Стилі для MODAL ===================*/
 
 /* ===================Стилі для PORTFOLIO ===================*/
 .wrap-portfolio {
@@ -504,7 +711,7 @@ ol {
   border-radius: 4px;
   cursor: pointer;
   transition: color var(--animation), background-color var(--animation),
-    border-color  var(--animation), box-shadow var(--animation);
+    border-color var(--animation), box-shadow var(--animation);
 }
 
 .filter-button:hover,
@@ -538,9 +745,7 @@ ol {
 
 .item-portfolio {
   flex-basis: calc((100% - 48px) / 3);
-  
 }
-
 
 .link-portfolio {
   display: block;
@@ -557,7 +762,6 @@ ol {
 .link-portfolio:hover .overlay,
 .link-portfolio:focus .overlay {
   transform: translateY(0);
-  
 }
 
 .wrap-img {
@@ -588,10 +792,4 @@ ol {
   border-top: none;
 }
 
-.list-text {
-  color: var(--primary-gray-color);
-  font-size: 16px;
-}
-
 /* ===================/Стилі для PORTFOLIO ===================*/
-
