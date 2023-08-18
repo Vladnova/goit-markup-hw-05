@@ -727,7 +727,7 @@ ol {
 .visually-hidden:checked+.modal-label-checkbox .custom-checkbox {
   background-color: var(--primary-accent-color);
   fill: var(--secondary-white-color);
-  border-color: none;
+  border: none;
 }
 
 .modal-checkbox:focus+.modal-label-checkbox .custom-checkbox {
