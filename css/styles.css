@@ -708,7 +708,7 @@ ol {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  fill: red;
+  fill: transparent;
   background-color: transparent;
   width: 16px;
   height: 16px;
@@ -730,7 +730,7 @@ ol {
   border-color: none;
 }
 
-.modal-checkbox:focus+.checkbox-icon {
+.modal-checkbox:focus+.modal-label-checkbox .custom-checkbox {
   outline: 1px solid var(--primary-blue-color);
 }
 
