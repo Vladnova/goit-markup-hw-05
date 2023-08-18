@@ -443,6 +443,7 @@ ol {
   display: block;
   color: var(--primary-white-color);
   font-size: 12px;
+  line-height: 1.5;
   width: 264px;
   height: 40px;
   letter-spacing: 0.04em;
@@ -637,9 +638,10 @@ ol {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
-  border: 1px solid var(--border-color-input-modal);
-  font-size: 18px;
-  color: var(--secondary-gray-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--border-color-input-modal);
   background-color: transparent;
   outline: transparent;
   resize: none;
@@ -691,7 +693,7 @@ ol {
   color: var(--customers-icon-color);
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 .active-link-policy {
@@ -706,7 +708,7 @@ ol {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  fill: transparent;
+  fill: red;
   background-color: transparent;
   width: 16px;
   height: 16px;
@@ -722,7 +724,7 @@ ol {
   color: transparent;
 } */
 
-.visually-hidden:checked+.modal-label-checkbox.custom-checkbox {
+.visually-hidden:checked+.modal-label-checkbox .custom-checkbox {
   background-color: var(--primary-accent-color);
   fill: var(--secondary-white-color);
   border-color: none;
